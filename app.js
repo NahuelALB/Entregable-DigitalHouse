@@ -11,3 +11,7 @@ app.listen(3001, () => {
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, './views/home.html'));
 });
+
+app.get('/registro', (req, res) => {
+  res.sendFile(path.join(__dirname, './views/registro.html'));
+});

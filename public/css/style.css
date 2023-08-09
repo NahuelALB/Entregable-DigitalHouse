@@ -13,28 +13,46 @@
   --verde: #39b54a;
 }
 
-body{
+/*Estilos para el <body>*/
+body {
   font-family: 'Roboto', sans-serif;
   font-size: 14px;
 }
+
+/*Estilos para el <header>*/
 
 header {
   background-color: var(--amarillo);
 }
 
 .logo {
-  margin-top: 10px;
-  margin-left: 10px;
+  margin-top: 0%;
+  margin-left: 0%;
 
-  padding-top: 10px;
-  padding-left: 10px;
+  padding: 4px;
 
-  width: 150px;
+  width: 170px;
   height: 70px;
 }
 
 .barra {
-  margin-left: 20px;
+  width: 150px;
+}
+
+.searchBar {
+  margin: 0 10px;
+}
+
+.header h3 {
+  font-size: 14px;
+  text-align: center;
+}
+
+.navBar {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
 }
 
 .burger-menu {
@@ -51,42 +69,60 @@ i.fas.fa-bars {
   border-radius: 20%;
 }
 
-.banner{
+.banner {
   background-image: url(../Images/img-home-banner.jpg);
   width: 100%;
-  height: 10vh;
+  height: 12vh;
   background-position: center;
-  background-size: contain;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 /*Hoja de estilo para el Main*/
 
-main{
+main {
   background-color: var(--grisClaro);
 }
 
-.artMain{
+.artMain {
   background-color: #fff;
-  margin-bottom: 10px;
-  margin-top: 10px;
   border-top: 1px solid #ebebeb;
-  padding: 15px;
+  padding: 5px;
+  margin: 15px;
 }
 
-.tituloArt{
-  font-size: 3vh;
+.artMain img {
+  display: block;
+  width: 100%;
+  padding: 10%;
+  padding-bottom: 1%;
 }
 
-.iconoMain{
-  margin-bottom: 10px;
+.iconoMain {
+  display: flex;
+  justify-content: flex-end;
+
+  padding: 0 20px;
 }
 
-i.fa-solid.fa-truck-fast{
-  font-size: 25px;
+.precios {
+  display: inline-block;
+  font-size: 20px;
+  margin: 0 5px;
+}
+
+.descuentos {
   color: var(--verde);
+  display: inline-block;
+  margin: 0 5px;
 }
 
-.descuentos{
+.tituloArt {
+  font-size: 22px;
+}
+
+i.fa-solid.fa-truck-fast {
+  font-size: 25px;
   color: var(--verde);
 }
 
@@ -127,14 +163,6 @@ i.fa-solid.fa-user-shield {
   font-size: 20px;
 }
 
-.titular {
-  font-size: 24px;
-}
-
-.precios {
-  font-size: 18px;
-}
-
 .descuentos {
   font-size: 16px;
 }
@@ -143,45 +171,59 @@ i.fa-solid.fa-user-shield {
   font-size: 16px;
 }
 
+@media (min-width: 361px) {
+  .artMain {
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+  }
+  .site {
+    display: none;
+  }
+  .login {
+    display: none;
+  }
+  .tituloArt {
+    display: none;
+  }
 
-@media (min-width: 361px){
-  .artMain{
-    background-color: #fff;
-    margin: 10px;
-    border-top: 1px solid #ebebeb;
-    padding: 15px;
-    box-shadow: 0px 0px 10px rgb(100, 100, 100); 
-  }
-  .site{
-    display: none;
-  }
-  .login{
-    display: none;
-  }
-  .tituloArt{
-    display: none;
+  .navBar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
   }
 }
 
-@media (min-width: 769px){
-    .artMain{
-    background-color: #fff;
-    margin-bottom: 10px;
-    margin-top: 10px;
-    border-top: 1px solid #ebebeb;
-    padding: 15px;
+@media (min-width: 769px) {
+  .artMain {
     box-shadow: 0px 0px 10px rgb(100, 100, 100);
   }
-    .burger-menu{
-      display: none;
+  .burger-menu {
+    display: none;
   }
-    .site{
-    display:block
-  }
-    .login{
+  .site {
     display: block;
   }
-  .tituloArt{
+  .login {
     display: block;
+  }
+  .tituloArt {
+    display: block;
+  }
+
+  .artMain {
+    display: inline-block;
+    width: 30%;
+  }
+
+  .visita {
+    display: flex;
+    flex-wrap: nowrap;
+  }
+
+  .navBar {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
   }
 }
